@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{97FB0028-07CF-3D08-B4B0-1F15C01D1A52}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>G:\G_Downloads\demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>G:\G_Downloads\demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>G:\G_Downloads\demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>G:\G_Downloads\demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\G_Downloads\demo\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule G:/G_Downloads/demo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+E:\Users\Kien\Anaconda3\Library\bin\cmake.exe -SG:/G_Downloads/demo -BG:/G_Downloads/demo --check-stamp-file G:/G_Downloads/demo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:/G_Downloads/demo/CMakeLists.txt;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeRCInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeCCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeCXXCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeRCCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeSystem.cmake;G:\G_Downloads\demo\CMakeLists.txt;G:\G_Downloads\demo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\G_Downloads\demo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule G:/G_Downloads/demo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+E:\Users\Kien\Anaconda3\Library\bin\cmake.exe -SG:/G_Downloads/demo -BG:/G_Downloads/demo --check-stamp-file G:/G_Downloads/demo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:/G_Downloads/demo/CMakeLists.txt;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeRCInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeCCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeCXXCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeRCCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeSystem.cmake;G:\G_Downloads\demo\CMakeLists.txt;G:\G_Downloads\demo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\G_Downloads\demo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule G:/G_Downloads/demo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+E:\Users\Kien\Anaconda3\Library\bin\cmake.exe -SG:/G_Downloads/demo -BG:/G_Downloads/demo --check-stamp-file G:/G_Downloads/demo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:/G_Downloads/demo/CMakeLists.txt;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeRCInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeCCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeCXXCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeRCCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeSystem.cmake;G:\G_Downloads\demo\CMakeLists.txt;G:\G_Downloads\demo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\G_Downloads\demo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule G:/G_Downloads/demo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+E:\Users\Kien\Anaconda3\Library\bin\cmake.exe -SG:/G_Downloads/demo -BG:/G_Downloads/demo --check-stamp-file G:/G_Downloads/demo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:/G_Downloads/demo/CMakeLists.txt;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeRCInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\Windows.cmake;E:\Users\Kien\Anaconda3\Library\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeCCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeCXXCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeRCCompiler.cmake;G:\G_Downloads\demo\CMakeFiles\3.14.0\CMakeSystem.cmake;G:\G_Downloads\demo\CMakeLists.txt;G:\G_Downloads\demo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\G_Downloads\demo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="G:\G_Downloads\demo\ZERO_CHECK.vcxproj">
+      <Project>{1592F2CB-5FEF-38DF-BBA5-7DB4CE6F0965}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="G:\G_Downloads\demo\hello.vcxproj">
+      <Project>{677DADFA-E1BB-3F09-8910-A9486A72D43E}</Project>
+      <Name>hello</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
